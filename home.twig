@@ -29,17 +29,19 @@
                 </div>
 
             </div>
-
-            {{widget('feature', 'featurehome', {
-                "header": "profile",
-                "defaultBgImg": asset('images/feature-bg.jpg'),
-                'positionTopPercentage': '0',
-                'showBtn': false,
-                buttonText: "Lorem Ipsum"
-            })|raw}}
+            <div class="feature-arrow-down">
+                {{widget('feature', 'featurehome', {
+                    "header": "profile",
+                    "defaultBgImg": asset('images/feature-bg.jpg'),
+                    'positionTopPercentage': '0',
+                    'showBtn': false,
+                    buttonText: "Lorem Ipsum"
+                })|raw}}
+                <a href="#canvas" class="arrow-down">&#8964;</a>
+            </div>
 
             <!-- End Template Widgets -->
-            <div class="canvas">
+            <div class="canvas" id="canvas">
                 <!-- Main Widet Zone -->
                 {{zone('main')|raw}}
             </div>
