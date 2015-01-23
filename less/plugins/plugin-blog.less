@@ -1,0 +1,86 @@
+// -------------------------------------
+// BaseKit Baseplate: CSS > Plugin: Blog
+// -------------------------------------
+
+// List of posts
+// -------------
+
+.post-items {
+    border: 5px solid darken(@color-swatch1, 10%);
+    display: inline-block;
+}
+
+.bk-blogpostlist .post-article {
+    position: relative;
+    float: left;
+    display: inline-block;
+    line-height: 0;
+    width: 33.3%;
+    min-height: 350px;
+    margin-bottom: 0;
+    padding: 20px;
+    border: 1px solid darken(@color-swatch1, 10%);
+    @media @tablet {
+        width: 100%;
+        min-height: 250px;
+    }
+    .post-content {
+        margin: 30px 0 20px;
+    }
+    .post-image {
+        display: none;
+    }
+    .title-link, 
+    .read-more {
+        &:hover {
+            color: @color-swatch2;
+            text-decoration: none;
+        }
+    }
+    .read-more {
+        position: relative;
+        &:after {
+            content: "\2192";
+            font-size: 17px;
+            line-height: 14px;
+            position: absolute;
+            padding-left: 5px;
+        }
+    }
+    .post-footer {
+        position: absolute;
+        top: 10px;
+    }
+}
+
+
+// Single Post
+// -----------
+
+div#page-zones__main-widgets__blogpostWidget {
+    width: 100%;
+    margin: 0;
+    .post-content,
+    .post-footer {
+        width: 90%;
+        margin: 0 5%;
+        @media only screen and (min-width: 1300px) {
+            width: 1200px; // 1140px - 10% for margins
+            margin: 0 auto;
+        }
+    }
+}
+
+.blog-post__post-title {
+    margin-bottom: 10px;
+}
+
+.post-image {
+    margin-bottom: 30px;
+    .image-link {
+        text-align: center;
+    }
+    .blog-post__image {
+        max-height: 500px;
+    }
+}
