@@ -1,6 +1,6 @@
-// --------------------------------
-// BaseKit Baseplate Template (v1.0)
-// --------------------------------
+// ----------------------------------
+// BaseKit Standard Theme: Stylesheet
+// ----------------------------------
 
 // -----------------------------
 // #Table of Contents
@@ -9,7 +9,6 @@
 // 1. #LESS INCLUDES
 // 2. #PAGE SETTINGS
 // 3. #TEMPLATE STYLES
-
 
 
 
@@ -50,10 +49,32 @@
 }
 
 
+// Main Widget Zone
+// ----------------
+
+.canvas {
+    background-color: @color-swatch1;
+    padding: 3em 0;
+}
 
 
 // -----------------------------
 // 3. #Template Styles
 // -----------------------------
 
+// Widgets width
 
+.container .canvas .widget {
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1300px) {
+        width: 1200px; // 1140px - 10% for margins
+        margin: 0 auto;
+    }
+}
+
+// Links
+
+a {
+    color: @color-swatch3;
+}

@@ -1,0 +1,19 @@
+<!-- Template Widgets -->
+<div class='theme-header flex-container'>
+
+    <div class="flex-item">
+        <div class="brand">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile", "showTplWidget":"0"})|raw}}
+        </div>
+    </div>
+
+    <div class="flex-item">
+        {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
+    </div>
+
+    <div class="flex-item">
+        {{widget('button', 'button', {text:'button', 'align':'widget-align-right'})|raw}}
+    </div>
+
+</div>

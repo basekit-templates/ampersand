@@ -1,59 +1,18 @@
 {% extends "layout.twig" %}
-
+{% block class %}theme-default{% endblock %}
 {% block content %}
 
-<div class="bk-default">
-
-    <!-- Container -->
-    <div class="container">
-
-        <!-- Page Content -->
-        <section class="template-content">
-
-            <!-- Template Widgets -->
-            <div class='theme-header flex-container'>
-                <div class="flex-item">
-                    <div class="brand">
-                        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-                        {{widget('companyname', 'companyname', {"business": "profile", "showTplWidget":"0"})|raw}}
-                    </div>
-                </div>
-
-                <div class="flex-item">
-                    {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
-                </div>
-
-                <div class="flex-item">
-                    {{widget('button', 'button', {text:'button', 'align':'widget-align-right'})|raw}}
-                </div>
-
-            </div>
-
-            <div class="page-title">
-                <div class="page-title-container">
-                    <h1>
-                        <span>{{ page.title }}</span>
-                    </h1>
-                </div>
-            </div>
-
-            <!-- End Template Widgets -->
-            <div class="canvas">
-                <!-- Main Widet Zone -->
-                {{zone('main')|raw}}
-            </div>
-        </section>
-
-        <div class="theme-footer">
-            <div class="footer-container">
-                {{widget('logo', 'logo-footer', {"defaultlogo": asset('images/logo.png')})|raw}}
-                {{widget('content', 'content-footer', {content: 'This is a content widget.', lines: 'all'})|raw}}
-            </div>
-        </div>
-    <!-- End Container -->
+<div class="page-title">
+    <div class="page-title__container">
+        <h1>
+            <span>{{ page.title }}</span>
+        </h1>
     </div>
-
 </div>
 
+<div class="canvas">
+    <!-- Main Widet Zone -->
+    {{zone('main')|raw}}
+</div>
 
 {% endblock %}

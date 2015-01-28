@@ -1,4 +1,4 @@
 Ampersand
 =========
 
-BaseKit Baseplate Template
+BaseKit Theme
