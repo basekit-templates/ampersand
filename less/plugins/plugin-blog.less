@@ -2,23 +2,24 @@
 // BaseKit Standard Theme: LESS > Plugin: Blog
 // -------------------------------------------
 
-// List of posts
-// -------------
+// ----------
+// Posts List
+// ----------
 
 .post-items {
-    border: 5px solid darken(@color-swatch1, 10%);
     display: inline-block;
+    border: 5px solid darken(@color-swatch1, 10%);
 }
 
-.bk-blogpostlist .post-article {
-    position: relative;
-    float: left;
+.blogpostlist .post-article {
     display: inline-block;
-    line-height: 0;
+    float: left;
+    position: relative;
     width: 33.3%;
     min-height: 350px;
     margin-bottom: 0;
     padding: 20px;
+    line-height: 0;
     border: 1px solid darken(@color-swatch1, 10%);
     @media @tablet {
         width: 100%;
@@ -30,7 +31,7 @@
     .post-image {
         display: none;
     }
-    .title-link, 
+    .title-link,
     .read-more {
         &:hover {
             color: @color-swatch2;
@@ -39,12 +40,13 @@
     }
     .read-more {
         position: relative;
+        // Arrow
         &:after {
-            content: "\2192";
-            font-size: 17px;
-            line-height: 14px;
             position: absolute;
             padding-left: 5px;
+            content: "\2192";
+            line-height: 14px;
+            font-size: 17px;
         }
     }
     .post-footer {
@@ -54,8 +56,10 @@
 }
 
 
+// -----------
 // Single Post
 // -----------
+
 
 div#page-zones__main-widgets__blogpostWidget {
     width: 100%;
@@ -71,12 +75,15 @@ div#page-zones__main-widgets__blogpostWidget {
     }
 }
 
-.blog-post__post-title {
+.blog-post .post-title {
     margin-bottom: 10px;
 }
 
 .post-image {
     margin-bottom: 30px;
+    .image {
+        margin: 0 auto;
+    }
     .image-link {
         text-align: center;
     }
