@@ -151,23 +151,26 @@
 // #Product Filter
 //----------------
 
+.product-filters .input--search {
+    height: 50px;
+    @media @mobile {
+        margin-bottom: 20px;
+    }
+}
 
 .ecomproductslist .button {
     margin: 0;
     padding: 12px 17px 5px 20px;
     height: 50px;
+    @media @mobile {
+        margin-bottom: 20px;
+    }
 }
 
 // Style for mobile
-
 @media only screen and (max-width : 480px) {
-    .ecomproductslist {
-        .form-group {
-            width: 100%;
-        }
-        .input {
-            margin-bottom: 20px;
-        }
+    .ecomproductslist .form-group {
+        width: 100%;
     }
 }
 
