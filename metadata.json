@@ -1,8 +1,15 @@
 {
-    "name": "Ampersand",
-    "thumbnail": "thumbnail.png",
-    "pageTypes": ["home"],
+    "name": "abroad",
     "widgetVersion":2,
+    "thumbnail": "thumbnail.png",
+    "screenshot": "thumbnail.png",
+    "templateType":"standard",
+    "pageTypes": ["home", "default"],
+    "tags": {
+        },
+    "images":[
+        "images/feature-bg.jpg"
+    ],
     "colorSwatches":
     {
         "Swatch 1": {
