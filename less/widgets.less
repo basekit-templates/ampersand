@@ -66,7 +66,7 @@
 
 .company-link:hover {
     text-decoration: none;
-    color: @color-swatch2;
+    color: @color-swatch3;
 }
 
 
@@ -84,19 +84,25 @@
 }
 
 // Folder Item Parent: Gives arrow
-.item-name--parent:after {
-    display: inline-block;
-    vertical-align: middle;
-    content: "";
-    margin-left: 4px;
-    border: 5px solid transparent;
-    border-top-color: @color-swatch6;
+.item-name--parent {
+    &:after {
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
+        margin-left: 4px;
+        border: 5px solid transparent;
+        border-top-color: @font-swatch6-color;
+    }
+    &:hover:after {
+        border-top-color: @font-swatch6-color-hover;
+    }
 }
 
 // Folder
 .navigation-list--children {
     white-space: normal;
     width: auto;
+    border: 1px solid darken(@color-swatch1, 10%);
 }
 
 // Hover effect for desktop
@@ -110,31 +116,9 @@
         -webkit-transition: color 0.3s;
         -moz-transition: color 0.3s;
         transition: color 0.3s;
-        background-color: @color-swatch1;
-        &:hover {
-            color: @color-swatch6;
-        }
     }
-    .navigation-item .item-name:hover,
     .navigation-item.selected .item-name {
-        &:before {
-            position: absolute;
-            width: 100%;
-            left: 0;
-            top: 50%;
-            height: 2px;
-            margin-top: -1px;
-            background: @color-swatch2;
-            content: '';
-            z-index: -1;
-            -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-            -moz-transition: -moz-transform 0.3s, opacity 0.3s;
-            transition: transform 0.3s, opacity 0.3s;
-            pointer-events: none;
-            -webkit-transform: rotate(-65deg);
-            -moz-transform: rotate(-65deg);
-            transform: rotate(-65deg);
-        }
+        color: @font-swatch6-color-hover;
     }
 } //end styles for desktop
 
@@ -646,8 +630,8 @@ div#page-zones__main-widgets__galleryWidget {
         position: absolute;
     }
     &:hover {
-        border: 2px solid @color-swatch2;
-        color: @color-swatch2;
+        border: 2px solid @color-swatch3;
+        color: @color-swatch3;
     }
 }
 // Align Center for Tablet and Mobile
