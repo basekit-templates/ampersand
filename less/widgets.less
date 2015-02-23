@@ -550,19 +550,54 @@ div#page-zones__main-widgets__galleryWidget {
 // Slideshow Image Captions
 // ------------------------
 
-.responsiveslideshow__caption {
+.responsiveslideshow .caption {
     position: absolute;
     bottom: 0;
     width: 100%;
     padding: 20px;
+    .image-title {
+        color: @color-swatch1;
+    }
 }
 
-// Slideshow Pagination
-// --------------------
+
+// Slideshow navigation - buttons
+// ------------------------------
+
+.slide-navigation {
+    text-align: center;
+    .button {
+        // Tablet and Desktop
+        @media only screen and (min-width:480px) {
+            margin: 10px 5px;
+            min-width: 122px;
+        }
+    }
+}
+
+// Responsive Columns
+.responsivecolumns .slide-navigation {
+    .control-text {
+        display: none;
+    }
+}
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right {
+    .slide-navigation .button {
+        margin: 10px 0;
+    }
+}
+
+
+// Slideshow Pagination - dots
+// ---------------------------
 
 .slide-pagination .pagination-list {
     display: inline-block;
     width: 100%;
+    text-align: center;
     .pagination-item {
         display: inline-block;
         margin: 0 2px;
