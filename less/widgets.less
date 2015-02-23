@@ -459,7 +459,7 @@ div#page-zones__main-widgets__galleryWidget {
 }
 
 // Gallery Item
-.gallery__gallery-item {
+.gallery .gallery-item {
     position: relative;
     width: 33.3%;
     margin-bottom: 1px;
@@ -476,19 +476,95 @@ div#page-zones__main-widgets__galleryWidget {
 // --------------
 
 // Use Background-image Method
-.gallery__image-link {
+.gallery .image-link {
     display: block;
     height: 400px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @media @tablet {
+        height: 346px;
+    }
     @media only screen and (max-width : 650px) {
         height: 250px;
     }
 }
 
+// Gallery Images in Responsive Columns
+
+// Two Columns
+.columns-two-left,
+.columns-two-right {
+    .gallery__image-link {
+        height: 150px;
+        @media @tablet {
+            height: 107px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    .gallery__caption {
+        padding: 10px;
+        // hide description on desktop
+        @media only screen and (min-width: 768px) {
+            .image-description {
+                display: none;
+            }
+        }
+    }
+    // hide caption on tablet only
+    @media only screen and (max-width : 768px) and (min-width : 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right {
+    .gallery__image-link {
+        height: 95px;
+        @media @tablet {
+            height: 69px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    // hide caption on desktop and tablet
+    @media only screen and (min-width: 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .gallery__image-link {
+        height: 69px;
+        @media @tablet {
+            height: 107px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    // hide caption on desktop and tablet
+    @media only screen and (min-width: 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}
+
+
 // Hide Img Element
-.gallery__image {
+.gallery .image {
     display: none;
 }
 
@@ -497,7 +573,7 @@ div#page-zones__main-widgets__galleryWidget {
 // ----------------------
 
 // Hide Caption
-.gallery__caption {
+.gallery .caption {
     display: none;
     margin: 0;
     padding: 20px;
@@ -513,6 +589,10 @@ div#page-zones__main-widgets__galleryWidget {
     display: block;
     width: 100%;
     height: 100%;
+}
+
+.gallery .caption-link:hover {
+    text-decoration: none;
 }
 
 
@@ -589,7 +669,7 @@ div#page-zones__main-widgets__galleryWidget {
 .columns-three-middle,
 .columns-three-right {
     .slide-navigation .button {
-        margin: 10px 0;
+        margin: 10px 2px;
         min-width: inherit;
     }
 }
