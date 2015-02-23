@@ -91,10 +91,10 @@
             "font-family": "\"Helvetica\", Arial, sans-serif",
             "font-size": "16px",
             "font-weight": "inherit",
-            "line-height": "inherit",
+            "line-height": "26px",
             "color": "@color-swatch6",
             "color-hover": "@color-swatch3",
-            "letter-spacing": "26px",
+            "letter-spacing": "inherit",
             "background-color": "@color-swatch1",
             "background-color-hover": "@color-swatch1"
          },
