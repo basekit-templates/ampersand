@@ -6,9 +6,14 @@
     "templateType":"standard",
     "pageTypes": ["home", "default"],
     "tags": {
-        },
+    "en": ["creative", "agency", "design", "multipurpose", "portfolio", "contemporary", "flexible", "modern", "images", "photography"],
+    "es": ["creativo", "agencia", "diseño", "multiuso", "portafolio", "contemporáneo", "flexible", "moderno", "imágenes", "fotográfico"],
+    "br": ["criativo", "agência", "design", "multiuso", "portfolio", "contemporâneo", "flexível", "moderno", "imagens", "fotografia"]
+    },
     "images":[
-        "images/feature-bg.jpg"
+        "images/feature-bg.jpg",
+        "images/ampersand-bg.jpg",
+        "images/logo.png"
     ],
     "colorSwatches":
     {
