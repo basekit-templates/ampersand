@@ -813,13 +813,26 @@ div#page-zones__main-widgets__galleryWidget {
                 4px 4px 0 0 @color-swatch4,
                 inset 3px 3px 0 0 @color-swatch1,
                 inset 4px 4px 0 0 @color-swatch4;
-    .avatar {
-        margin-right: 8px;
-    }
     .avatar,
     .tweet-wrap {
-        display: inline-block;
         vertical-align: top;
+    }
+    .avatar {
+        display: inline-block;
+        max-width: 17%;
+        margin-right: 2%;
+        @media @mobile {
+            display: none;
+        }
+    }
+    .tweet-wrap {
+        max-width: 79%;
+        display: inline-block;
+        @media @mobile {
+            max-width: 100%;
+            width: auto;
+            margin: 0 auto;
+        }
     }
 }
 
