@@ -16,11 +16,6 @@
 	}
 }
 
-.menu-item {
-	border-bottom: 1px solid darken(@color-swatch1, 8%);
-	padding-bottom: 30px;
-}
-
 .menu-item-name {
 	font-family: @font-swatch6-font-family;
     color: @color-swatch3;
@@ -111,9 +106,10 @@
 // -------------
 
 .menu-item {
-	border: 2px solid darken(@color-swatch1, 10%);
-	padding: 3em;
+	display: inline-block;
+	padding: 2.5em;
 	width: 100%;
+	border: 2px solid darken(@color-swatch1, 10%);
 	@media only screen and (max-width: 900px) {
 		padding: 2em;
 	}

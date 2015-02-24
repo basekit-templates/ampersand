@@ -19,7 +19,7 @@
         -moz-column-count: 2;
         -webkit-column-count: 2;
     }
-    @media @mobile {
+    @media only screen and (max-width: 700px) {
         column-count: 1;
         -moz-column-count: 1;
         -webkit-column-count: 1;
@@ -28,7 +28,6 @@
 
 .blogpostlist .post-article {
     position: relative;
-    display: table; // Solves Firefox bug
     width: 100%;
     min-width: 33.3%;
     margin-bottom: 20px;
@@ -39,14 +38,9 @@
     -o-column-break-inside: avoid;
     page-break-inside: avoid;
     border: 2px solid darken(@color-swatch1, 10%);
-    @media @tablet {
-        -webkit-column-count: 1;
-        -moz-column-count: 1;
-        column-count: 1;
-    }
     .post-content {
-        margin: 40px 0 30px;
-        padding: 20px;
+        margin: 40px 0 20px;
+        padding: 20px 30px;
     }
     .post-image {
         display: none;
@@ -62,10 +56,8 @@
         position: relative;
         // Arrow
         &:after {
-            position: absolute;
-            padding-left: 5px;
+            padding-left: 7px;
             content: "\2192";
-            line-height: 14px;
             font-size: 17px;
         }
     }
@@ -101,6 +93,7 @@
 
 // Horizontal rule in blog
 .blogpost hr {
+    margin-bottom: 20px;
     height: 1px;
     border: 0;
     background-color: @color-swatch4;
