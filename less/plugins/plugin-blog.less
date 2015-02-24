@@ -8,7 +8,6 @@
 
 .post-items {
     display: inline-block;
-    border: 5px solid darken(@color-swatch1, 10%);
 }
 
 .blogpostlist .post-article {
@@ -17,10 +16,15 @@
     position: relative;
     width: 33.3%;
     min-height: 350px;
-    margin-bottom: 0;
+    margin-bottom: -4px;
     padding: 20px;
     line-height: 0;
-    border: 1px solid darken(@color-swatch1, 10%);
+    border: 4px solid darken(@color-swatch1, 10%);
+    // negative margin on desktop
+    @media only screen and (min-width: 768px) {
+        margin-right: -4px;
+    }
+    // full with on tablet and mobile
     @media @tablet {
         width: 100%;
         min-height: 250px;
