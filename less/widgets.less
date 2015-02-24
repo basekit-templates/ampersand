@@ -236,10 +236,14 @@
     background-size: cover;
 }
 
-.feature__content-wrap {
+.feature .content-wrap {
     vertical-align: middle;
     display: table-cell;
     text-align: center;
+    background-color: hsla(hue(@color-swatch4),
+                       saturation(@color-swatch4),
+                       lightness(lighten(@color-swatch4,10%)),
+                       .2);
 }
 
 .feature__headline {
