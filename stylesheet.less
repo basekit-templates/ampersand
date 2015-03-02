@@ -9,6 +9,7 @@
 // 1. #LESS INCLUDES
 // 2. #PAGE SETTINGS
 // 3. #TEMPLATE STYLES
+// 4. #MIXINS
 
 
 
@@ -67,4 +68,18 @@
 
 a {
     color: @color-swatch3;
+}
+
+
+// -----------------------------
+// 3. #Mixins
+// -----------------------------
+
+
+.transition (@prop: all, @time: 0.5s, @ease: ease) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition:    @prop @time @ease;
+    -ms-transition:     @prop @time @ease;
+    -o-transition:      @prop @time @ease;
+    transition:         @prop @time @ease;
 }
