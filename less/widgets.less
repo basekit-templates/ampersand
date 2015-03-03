@@ -121,10 +121,11 @@
         -moz-transition: color 0.3s;
         transition: color 0.3s;
     }
-    .navigation-item.selected .item-name {
-        color: @font-swatch6-color-hover;
-    }
 } //end styles for desktop
+
+
+// Selected nav item
+.navigation-item.selected > .item-name { color: @font-swatch6-color-hover; }
 
 
 // Collapsible navigation
