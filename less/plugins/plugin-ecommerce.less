@@ -150,10 +150,20 @@
 // #Product Filter
 //----------------
 
-.product-filters .input--search {
-    height: 50px;
-    @media @mobile {
-        margin-bottom: 20px;
+.product-filters {
+    .input--search {
+        height: 50px;
+        @media @mobile {
+            margin-bottom: 20px;
+        }
+    }
+    .fieldset--search {
+        legend {
+            margin-bottom: 10px;
+        }
+        label {
+            display: none;
+        }
     }
 }
 

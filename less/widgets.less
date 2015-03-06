@@ -853,7 +853,8 @@ div#page-zones__main-widgets__galleryWidget {
 @media only screen and (min-width : 480px) {
 
     .signupform__form-body,
-    .blogsearch__form-body {
+    .blogsearch__form-body,
+    .ecomproductslist__form-body {
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -882,17 +883,15 @@ div#page-zones__main-widgets__galleryWidget {
         -webkit-align-items: flex-end;
         -ms-flex-align: end;
         align-items: flex-end;
-    }
-
-    .signupform__form-group:first-child,
-    .blogsearch__form-group:first-child {
-        -ms-flex: 0 11 100%;
-        -webkit-flex: 0 11 100%;
-        flex: 0 11 100%;
-        -webkit-align-self: auto;
-        -ms-flex-item-align: auto;
-        align-self: auto;
-        margin-right: 10px;
+        .form-group:first-child {
+            -ms-flex: 0 11 100%;
+            -webkit-flex: 0 11 100%;
+            flex: 0 11 100%;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+            margin-right: 10px;
+        }
     }
 
     .button--submit.blogsearch__input,
