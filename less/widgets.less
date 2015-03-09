@@ -954,27 +954,29 @@ div#page-zones__main-widgets__galleryWidget {
 // -----------------------------
 
 .twitter {
-    padding: 2em;
+    padding: 20px;
     border: 1px solid @color-swatch4;
     box-shadow: 4px 4px 0 -1px @color-swatch1,
                 4px 4px 0 0 @color-swatch4,
                 inset 3px 3px 0 0 @color-swatch1,
                 inset 4px 4px 0 0 @color-swatch4;
+    .tweet-item {
+        .clearfix;
+    }
     .avatar,
     .tweet-wrap {
         vertical-align: top;
+        float: left;
     }
     .avatar {
-        display: inline-block;
-        max-width: 17%;
+        max-width: 18%;
         margin-right: 2%;
         @media @mobile {
             display: none;
         }
     }
     .tweet-wrap {
-        max-width: 79%;
-        display: inline-block;
+        max-width: 80%;
         @media @mobile {
             max-width: 100%;
             width: auto;
