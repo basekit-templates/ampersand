@@ -48,6 +48,9 @@
     padding: 3em 15px;
 }
 
+.template-header-wrap {
+	padding: 0 15px;
+}
 
 // -----------------------------
 // 3. #Template Styles
@@ -55,12 +58,17 @@
 
 // Widgets width
 
-.container .canvas .widget {
+.container .canvas .widget,
+.template-header {
     margin-bottom: 20px;
     @media only screen and (min-width: 1300px) {
         max-width: 1200px; // 1140px - 10% for margins
         margin: 0 auto 20px;
     }
+}
+
+.template-header {
+	margin-bottom: 0;
 }
 
 // Links

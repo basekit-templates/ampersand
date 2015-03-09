@@ -1,19 +1,21 @@
 <!-- Template Widgets -->
-<div class='template-header flex-container'>
+<div class="template-header-wrap">
+    <div class='template-header flex-container'>
 
-    <div class="flex-item1">
-        <div class="brand">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'companyname', {"business": "profile", "showTplWidget":"0"})|raw}}
+        <div class="flex-item1">
+            <div class="brand">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'companyname', {"business": "profile", "showTplWidget":"0"})|raw}}
+            </div>
         </div>
-    </div>
 
-    <div class="flex-item2">
-        {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
-    </div>
+        <div class="flex-item2">
+            {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
+        </div>
 
-    <div class="flex-item3">
-        {{widget('button', 'button', {text:'button', 'align':'widget-align-right'})|raw}}
-    </div>
+        <div class="flex-item3">
+            {{widget('button', 'button', {text:'button', 'align':'widget-align-right'})|raw}}
+        </div>
 
+    </div>
 </div>
