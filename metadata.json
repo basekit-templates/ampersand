@@ -4,7 +4,7 @@
     "thumbnail": "thumbnail.png",
     "screenshot": "thumbnail.png",
     "templateType":"standard",
-    "pageTypes": ["home", "default"],
+    "pageTypes": ["home"],
     "tags": {
     "en": ["creative", "agency", "design", "multipurpose", "portfolio", "contemporary", "flexible", "modern", "images", "photography"],
     "es": ["creativo", "agencia", "diseño", "multiuso", "portafolio", "contemporáneo", "flexible", "moderno", "imágenes", "fotográfico"],
