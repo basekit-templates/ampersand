@@ -2,7 +2,7 @@
     "name": "Ampersand",
     "widgetVersion":2,
     "thumbnail": "thumbnail.png",
-    "screenshot": "screenshot.jpg",
+    "screenshot": "ampersand-screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
     "tags": {
