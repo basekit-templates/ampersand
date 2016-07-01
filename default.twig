@@ -3,11 +3,11 @@
 {% block content %}
 
 <div class="template-title-wrap">
-    <div class="template-title">
-        <h1>
-            <span>{{ page.title }}</span>
-        </h1>
-    </div>
+    {{widget('pagetitle', 'title', {})|raw}}
+    
+    {{widget('image', 'footerimage', {
+      'src': asset("/images/feature-bg.jpg")
+    })|raw}}
 </div>
 
 <div class="canvas">
