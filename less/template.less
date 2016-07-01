@@ -211,14 +211,25 @@
 }
 
 .template-title-wrap {
-	background-image: image('/images/ampersand-bg.jpg');
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-size: cover;
+	position: relative;
+	
+	[data-widget-type="pagetitle"] {
+		z-index: 9999;
+	}
+	
 	h1 {
 		color: @color-swatch1;
 		font-weight: 200;
 		padding: 1em 0;
+	}
+	
+	[data-widget-type="image"] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
 	}
 }
 
