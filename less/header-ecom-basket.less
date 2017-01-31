@@ -1,0 +1,167 @@
+
+.template-header-wrap {
+    @media only screen and (min-width: 768px) {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+
+        -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        .template-header {
+            -webkit-flex: 1 1 100%;
+            -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+        }
+
+        .header-basket {
+            -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        }
+    }
+}
+
+
+
+
+// ------------------------------
+// Ecommerce Basket on Header
+// ------------------------------
+
+
+  
+.header-basket .ecombasket {
+    @media @tablet {
+        position: relative;
+        text-align: center;
+    }
+    // Basket button toggle
+    &__basket-toggle {
+        float: right;
+        z-index: 9999;
+        width: auto;
+        height: 35px;
+        background-color: transparent;
+        font-size: 0;
+        letter-spacing: 0;
+        margin: 0 0 0 20px;
+        padding: 0;
+        position: relative;
+        z-index: 999;
+        border: 0;
+        box-shadow: none;
+
+        &:hover {
+            background-color: transparent;
+        }
+
+        @media @tablet {
+            margin: 0;
+            position: absolute;
+            top: 5px;
+            right: 0;
+        }
+    }
+
+    // Basket button quantity
+    &__item-count {
+        background-color: #000000;
+        border: 2px solid @color__link--text;
+        border-radius: 100px;
+        color: #ffffff;
+        content: "";
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 1.2;
+        height: 15px;
+        margin-top: 5px;
+        position: absolute;
+        right: 0;
+        width: 15px;
+    }
+
+    // Basket icon
+    .icon--basket {
+        &:before {
+            background-image: image('/images/basket-dark.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            content: "";
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+        }
+    }
+
+    .basket-body {
+        display: none;
+        min-width: 500px;
+        width: 100%;
+        position: absolute;
+        top: 55px;
+        right: 5px;
+        z-index: 2;
+        text-align: left;
+        border: 1px solid fade(@color-swatch5,50%);
+        background-color: lighten(@color-swatch1,30%);
+        padding: 0 1em 0.5em;
+        max-height: 500px;
+        overflow-y: scroll;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        @media @tablet {
+            max-height: initial;
+            margin-top: 5px;
+            right: 0;
+            min-width: 300px;
+        }
+        ul {
+            display: inline-block;
+            padding: 0;
+            width: 100%;
+            li {
+                width: 100%;
+                list-style: none;
+                float: left;
+                border-bottom: 1px solid fade(@color-swatch5,10%);
+                padding: 0.5em 0;
+                margin-top: 5px;
+                @media @tablet {
+                    padding: 1.5em 0;
+                }
+                .basket-item-name {
+                    font-size: @font__p--font-size;
+                    line-height: @font__p--line-height;
+                }
+                .item-remove {
+                    width: initial;
+                    top: 1.5em;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.header-basket .show-content .ecombasket .basket-body {
+    display: block !important;
+}

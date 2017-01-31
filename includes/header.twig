@@ -1,5 +1,13 @@
 <!-- Template Widgets -->
 <div class="template-header-wrap">
+
+    <!-- Ecom Basket -->
+    {% if plugins.ecommerce.store.live %}
+        <div class="header-basket">
+            {{widget('ecombasket', 'shopbasket', {})|raw}}
+        </div>
+    {% endif %}
+    
     <div class='template-header flex-container'>
 
         <div class="flex-item1">
@@ -14,8 +22,10 @@
         </div>
 
         <div class="flex-item3">
+            <!-- Ecom Basket -->
             {{widget('button', 'button', {text:'button', 'align':'widget-align-right'})|raw}}
         </div>
 
     </div>
+
 </div>
