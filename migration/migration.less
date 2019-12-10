@@ -8,14 +8,16 @@
 
     // Stylseheet overrides
     // -----------------------------
-    @canvas-side-padding: 15px;
+
 
     // Template wrapper (replace with corresponding template classes)
-    .canvas {
+    .canvas,
+    .container .canvas .widget{
         width: 100%;
         max-width: 100%;
         margin: 0;
-        padding: 0 @canvas-side-padding;
+        padding: 0;
+        width: 100%;
     }
 
     // Widget overflow to allow 10S overlays to display correctly
@@ -23,9 +25,6 @@
         overflow: inherit;
     }
 
-    .template-header-wrap {
-        overflow: hidden;
-    }
 
 
     // Migration styles
@@ -41,9 +40,11 @@
     // Applies spacing to widgets to mimic container width
     .empty-zone,
     #page-zones__main:empty,
-    #page-zones__main > .widget:not([data-name="row"]) {
+    #page-zones__main > .widget:not([data-name="row"]),
+    .row:not(.row--width-no-padding) .row__container {
         margin-left: auto;
         margin-right: auto;
+        width: ~"calc(100% - 30px)";
 
         @media only screen and (min-width: 1300px) {
             max-width: @container-width;
@@ -51,9 +52,7 @@
     }
 
     #page-zones__main > .widget[data-name="row"]:not(.row--width-no-padding) {
-        margin-left: -@canvas-side-padding;
-        margin-right: -@canvas-side-padding;
-        max-width: unset;
+        max-width: initial;
     }
 
     // Move spacing to first widget in the main zone (not sections)
@@ -83,12 +82,7 @@
 
     // Adds spacing to the section when a widget is before it
     #page-zones__main > .widget:not([data-name="row"]) + .widget[data-name="row"] {
-        margin-bottom: @spacing--other;
         margin-top: @spacing--other;
-
-        &:not(:last-child) {
-            margin-bottom: 0;
-        }
     }
 
     // fix padding issue for row add buttons
